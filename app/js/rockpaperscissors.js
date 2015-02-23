@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////
 /*   Provided Code - Please Don't Edit   */
 ////////////////////////////////////////////////
-'use strict';
+
 
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.");
@@ -43,7 +43,7 @@ function getComputerMove(move) {
 }
 
 function getWinner(playerMove,computerMove) {
-    var winner;
+    var winner = 'player';
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
@@ -54,21 +54,26 @@ function getWinner(playerMove,computerMove) {
     }
 
     else if(playerMove == 'rock' && computerMove =='scissors'){
-            winner = 'player';  
-              
+        
+         
     }
 
     else if(playerMove == 'paper' && computerMove == 'rock'){
-            winner = 'player';   
+    
     }
 
     else if(playerMove == 'scissors' && computerMove == 'paper'){
-            winner = 'player';      
+   
     }
 
     else{
         winner = 'computer';
     }
+    console.log();
+    console.log("====================================");
+    console.log(playerMove + " VS " + computerMove);
+    console.log("====================================");
+    console.log();
     return winner;
 }
 
@@ -87,19 +92,22 @@ function playToFive() {
      while((playerWins < gamesToWin) && (computerWins < gamesToWin)){
         
         whoWon = getWinner(getPlayerMove(),getComputerMove());
-
-     	if(whoWon =='player'){
-    	    	console.log(whoWon);
-		playerWins +=1;	
-	}
-    	else if(whoWon == 'computer'){
-		computerWins +=1;
-		console.log(whoWon);
- 	}
- 	else{
- 		console.log(whoWon);
- 		tied += 1;
- 	}
+        
+        
+        
+        if(whoWon =='player'){
+        playerWins +=1; 
+        console.log(whoWon+ "(" +playerWins +")");
+    }
+        else if(whoWon == 'computer'){
+        computerWins +=1;
+        console.log(whoWon + "("+computerWins+")");
+    }
+    else{
+    
+        tied += 1;
+            console.log(whoWon);
+    }
 
      }
 
