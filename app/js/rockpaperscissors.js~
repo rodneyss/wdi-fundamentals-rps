@@ -97,11 +97,11 @@ function playToFive() {
         
         if(whoWon =='player'){
         playerWins +=1; 
-        console.log(whoWon+ "(" +playerWins +")");
+        console.log("Winner: " + whoWon+ "(" +playerWins +")");
     }
         else if(whoWon == 'computer'){
         computerWins +=1;
-        console.log(whoWon + "("+computerWins+")");
+        console.log("Winner: " + whoWon + "("+computerWins+")");
     }
     else{
     

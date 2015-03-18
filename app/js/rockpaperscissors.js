@@ -94,7 +94,7 @@ function playToFive() {
         whoWon = getWinner(getPlayerMove(),getComputerMove());
         
         
-        
+     //log to console round winner and current win   
         if(whoWon =='player'){
         playerWins +=1; 
         console.log("Winner: " + whoWon+ "(" +playerWins +")");
